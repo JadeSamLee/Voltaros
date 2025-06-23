@@ -1,0 +1,20 @@
+openapi: 3.0.3
+info:
+  title: Chaos Toolkit API
+  version: 1.0.0
+paths:
+  /run-experiment:
+    post:
+      summary: Run a chaos experiment
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Experiment result
+          content:
+            application/json:
+              schema:
+                type: object
