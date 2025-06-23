@@ -252,6 +252,5 @@ MIT License - See [LICENSE](LICENSE) for details.
 
 ## Acknowledgments
 - Google Cloud ADK Team for the Starter Pack.
-- Chaos Toolkit community for open-source tools.
 - Hackathon organizers for the #adkhackathon 2025 opportunity.
 
