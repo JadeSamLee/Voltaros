@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 213 10% 14%;
+    --card: 210 29% 97%;
+    --card-foreground: 213 10% 14%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 213 10% 14%;
+    --primary: 259 92% 67%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 210 29% 97%;
+    --secondary-foreground: 213 10% 14%;
+    --muted: 210 29% 97%;
+    --muted-foreground: 213 10% 44%;
+    --accent: 340 92% 67%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 16% 87%;
+    --input: 210 16% 87%;
+    --ring: 259 92% 67%;
+    --chart-1: 259 92% 67%;
+    --chart-2: 340 92% 67%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --sidebar-background: 213 10% 17%;
+    --sidebar-foreground: 210 16% 87%;
+    --sidebar-primary: 259 92% 67%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 212 12% 21%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 212 12% 21%;
+    --sidebar-ring: 259 92% 67%;
+  }
+
+  .dark {
+    --background: 212 28% 10%;
+    --foreground: 212 13% 84%;
+    --card: 212 28% 13%;
+    --card-foreground: 212 13% 84%;
+    --popover: 212 28% 10%;
+    --popover-foreground: 212 13% 84%;
+    --primary: 259 92% 77%;
+    --primary-foreground: 212 28% 10%;
+    --secondary: 212 28% 13%;
+    --secondary-foreground: 212 13% 84%;
+    --muted: 212 28% 13%;
+    --muted-foreground: 212 13% 64%;
+    --accent: 340 92% 77%;
+    --accent-foreground: 212 28% 10%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 212 12% 21%;
+    --input: 212 12% 21%;
+    --ring: 259 92% 77%;
+    --chart-1: 259 92% 77%;
+    --chart-2: 340 92% 77%;
+    --sidebar-background: 212 28% 7%;
+    --sidebar-foreground: 212 13% 84%;
+    --sidebar-primary: 259 92% 77%;
+    --sidebar-primary-foreground: 212 28% 10%;
+    --sidebar-accent: 212 28% 13%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 212 12% 21%;
+    --sidebar-ring: 259 92% 77%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.bubbles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  overflow: hidden;
+  background: hsl(var(--background));
+}
+
+.bubble {
+  position: absolute;
+  bottom: -150px;
+  width: 40px;
+  height: 40px;
+  background-color: hsl(var(--accent) / 0.1);
+  border-radius: 50%;
+  animation: rise 25s infinite ease-in;
+  opacity: 0;
+}
+
+.bubble:nth-child(1) { width: 40px; height: 40px; left: 10%; animation-duration: 25s; animation-delay: 0s; }
+.bubble:nth-child(2) { width: 20px; height: 20px; left: 20%; animation-duration: 15s; animation-delay: 1s; }
+.bubble:nth-child(3) { width: 50px; height: 50px; left: 35%; animation-duration: 30s; animation-delay: 2s; }
+.bubble:nth-child(4) { width: 80px; height: 80px; left: 50%; animation-duration: 40s; animation-delay: 0s; }
+.bubble:nth-child(5) { width: 35px; height: 35px; left: 55%; animation-duration: 18s; animation-delay: 1s; }
+.bubble:nth-child(6) { width: 45px; height: 45px; left: 65%; animation-duration: 28s; animation-delay: 3s; }
+.bubble:nth-child(7) { width: 60px; height: 60px; left: 75%; animation-duration: 35s; animation-delay: 2s; }
+.bubble:nth-child(8) { width: 25px; height: 25px; left: 80%; animation-duration: 12s; animation-delay: 4s; }
+.bubble:nth-child(9) { width: 15px; height: 15px; left: 70%; animation-duration: 22s; animation-delay: 2s; }
+.bubble:nth-child(10) { width: 90px; height: 90px; left: 90%; animation-duration: 45s; animation-delay: 5s; }
+
+
+@keyframes rise {
+  0% {
+    bottom: -150px;
+    transform: translateX(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  100% {
+    bottom: 100vh;
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
