@@ -200,23 +200,6 @@ Voltaros, built for the Google Cloud ADK Hackathon, automates chaos engineering 
 - **Permission Error**: `2025-06-23T10:15:00Z`, failed pod crash due to missing `roles/container.admin`.
 - **Storage Access**: `2025-06-23T10:20:00Z`, 403 error fetching `experiment.json`, resolved with updated credentials.
 
-## Demo Details
-### 3-Minute Video Script
-- **0:00–0:15**: Intro with elevator pitch.
-- **0:15–0:30**: Show user flow diagram: “This diagram outlines Voltaros’ chaos workflow.”
-- **0:30–1:00**: Frontend demo:
-  - Select “Pod Crash”, click “Trigger Chaos Experiment” → “Triggering Pod Crash... Please wait.” → “Success! Pod Crash applied at 2025-06-24T04:53:00Z.”
-  - Click “Collect Metrics” and “Generate Report” to show plot.
-- **1:00–2:15**: Backend logs: “Logs confirm the pod crash and metric collection at 04:53 AM IST.”
-- **2:15–2:45**: Visualization: “Vertex AI plot shows CPU usage post-crash.”
-- **2:45–3:00**: Footer: “Powered by Google Cloud ADK | #adkhackathon 2025.”
-
-### Demo Text
-- **Dropdown**: "Select Chaos Experiment" (options: "Pod Crash", "Network Latency")
-- **Buttons**: "Trigger Chaos Experiment", "Collect Metrics", "Generate Report"
-- **Status**: "Ready to trigger chaos!" → "Success! Pod Crash applied at 2025-06-24T04:53:00Z."
-- **Plot Title**: "Voltaros Chaos Experiment Metrics"
-- **Welcome**: "Welcome to Voltaros! Test your GKE app's resilience."
 
 ## Challenges
 - **Learning Curve**: Grasping chaos engineering and Chaos Toolkit took time.
@@ -229,7 +212,7 @@ Voltaros, built for the Google Cloud ADK Hackathon, automates chaos engineering 
 - Integrated GKE, BigQuery, Vertex AI, and ADK seamlessly.
 - Created an intuitive UI and demo-ready video.
 
-## What We Learned
+## What I Learned
 - Chaos engineering strengthens cloud resilience.
 - Deepened skills in GKE, BigQuery, and Vertex AI.
 - Mastered ADK multi-agent workflows and Vercel deployment.
@@ -248,7 +231,7 @@ Voltaros, built for the Google Cloud ADK Hackathon, automates chaos engineering 
 5. Open a pull request.
 
 ## License
-MIT License - See [LICENSE](LICENSE) for details.
+MIT License
 
 ## Acknowledgments
 - Google Cloud ADK Team for the Starter Pack.
